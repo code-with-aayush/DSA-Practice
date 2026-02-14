@@ -13,7 +13,6 @@ public class day2_part2 {
                     nonzero++;
                 }
             }
-
             for(int i = nonzero; i< nums.length; i++){
                 nums[i] = 0;
                 }
