@@ -1,6 +1,7 @@
 package com.DSATraining;
+// find the second highest element in the array.
 
-public class day1 {
+public class day1_question_1 {
     public static void main(String[] args) {
         int[] arr = {-1,5,4,9,-5,2};
         int first = -99999;
