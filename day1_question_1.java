@@ -1,4 +1,5 @@
 package com.DSATraining;
+
 // find the second highest element in the array.
 
 public class day1_question_1 {
