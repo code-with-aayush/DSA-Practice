@@ -27,5 +27,22 @@ If all assertions pass, then your solution will be accepted.
 */
 
 
+import java.util.Arrays;
+
 public class day3_question_2 {
+    public static void main(String[] args) {
+        int[] nums = {1,1,1,2,2,3,4,4};
+        int result = 0;
+        int n = nums.length;
+        for(int i=0; i< n; i++){
+            if(i < nums.length-1 && nums[i] == nums[i+1]){
+                continue;
+            }
+            else{
+                nums[result] = nums[i];
+                result++;
+            }
+        }
+        System.out.println(result);
+        }
 }
