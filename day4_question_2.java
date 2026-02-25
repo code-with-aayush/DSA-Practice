@@ -15,6 +15,27 @@ Notice that you may not slant the container.
  */
 
 
+import java.lang.Math;
 
 public class day4_question_2 {
+    public static void main(String[] args) {
+        int[] height = {8,7,2,1};
+        int n = height.length;
+        int left=0;
+        int right=n-1;
+        int ans = 0;
+        while (left<right){
+            ans = Math.max(ans,(right-left)*Math.min(height[left],height[right]));
+
+            if (height[right] > height[left]){
+                left++;
+            }
+            else {
+                right--;
+            }
+        }
+        System.out.println(ans);
+
+
+    }
 }
