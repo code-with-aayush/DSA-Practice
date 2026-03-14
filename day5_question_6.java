@@ -13,4 +13,27 @@ You must write an algorithm that runs in O(log n) time.
 
 
 public class day5_question_6 {
+    public static void main(String[] args) {
+        int[] nums = {1,2,3,1};
+        int start = 0;
+        int end = nums.length-1;
+        if(nums.length<=0){
+            System.out.println(-1);
+            return;
+        }
+        while(start<end){
+            int mid = start+(end-start)/2;
+
+
+            if(nums[mid+1]>nums[mid]){
+                start = mid+1;
+            }
+
+            else{
+                end = mid;
+            }
+        }
+        System.out.println(start);
+        return;
+    }
 }
