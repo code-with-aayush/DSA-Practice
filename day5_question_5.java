@@ -13,4 +13,36 @@ You are given an API bool isBadVersion(version) which returns whether version is
 
 
 public class day5_question_5 {
+    public static void main(String[] args) {
+        int n = 4;
+        long start = 0;
+        long end = n;
+        int ans = 1;
+
+        while(start<=end){
+            int mid = (int)((start+end)/2);
+            boolean check = isBadVersion(mid);
+            if(check == true){
+                end = mid-1;
+                ans = mid;
+            }
+            else if(check == false){
+                start = mid+1;
+            }
+            else{
+                System.out.println(mid);
+                return;
+            }
+        }
+        System.out.println(ans);
+        return;
+    }
+
+    private static boolean isBadVersion(int n) {
+        if (n>= 4){
+            return true;
+        }
+        else return false;
+    }
+
 }
