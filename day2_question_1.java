@@ -13,21 +13,19 @@ package com.DSATraining;
 
 public class day2_question_1 {
     public static void main(String[] args) {
-
         int[] prices = {7,1,5,3,6,4};
-        int buyPrice = prices[0];
-        int profit = 0;
+        int minPrice = prices[0];
+        int maxProfit = 0;
 
         for (int i = 1; i < prices.length; i++) {
-            if (buyPrice > prices[i]) {
-                buyPrice = prices[i];
-            }
 
-            profit = Math.max(profit, prices[i] - buyPrice);
+            minPrice = Math.min(minPrice, prices[i]);
+
+            int profit = prices[i] - minPrice;
+
+            maxProfit = Math.max(maxProfit, profit);
         }
-
-        System.out.println(profit);
-
-    }
+        System.out.println(maxProfit);
+        }
 }
 
