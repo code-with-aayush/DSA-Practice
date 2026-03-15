@@ -1,6 +1,6 @@
 package com.DSATraining;
 
-// find the second highest element in the array.
+// find the second-highest element in the array.
 
 public class day1_question_1 {
     public static void main(String[] args) {
@@ -21,5 +21,4 @@ public class day1_question_1 {
         System.out.println(second);
 
     }
-
 }
